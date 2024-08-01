@@ -5,41 +5,58 @@
 <template>
     <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#">CRUD</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                <a class="nav-link active" href="#">Home
+                <RouterLink class="nav-link" to="/">Inicio
                     <span class="visually-hidden">(current)</span>
-                </a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                </RouterLink>
                 </li>
                 <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Productos</a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <RouterLink class="dropdown-item" to="/products">Listado</RouterLink>
+                    <a class="dropdown-item" href="#">Añadir</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Separated link</a>
+                    <a class="dropdown-item" href="#">Otros</a>
                 </div>
                 </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Facturar</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Crear factura</a>
+                    <a class="dropdown-item" href="#">Listado</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Otros</a>
+                </div>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Clientes</a>
+                <div class="dropdown-menu">
+                    <RouterLink class="dropdown-item" to="/clients">Listado</RouterLink>
+                    <a class="dropdown-item" href="#">Añadir</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Otros</a>
+                </div>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Cuentas x Cobrar</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Cuentas x Pagar</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Acerca de</a>
+                </li>
             </ul>
-            <form class="d-flex">
-                <input class="form-control me-sm-2" type="search" placeholder="Search">
-                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-            </form>
+            <div class="d-flex">
+                <RouterLink to="/login" class="btn btn-warning me-2" type="button">Iniciar sesión</RouterLink>
+                <RouterLink to="/register" class="btn btn-secondary me-2" type="button">Registrarse</RouterLink>
+            </div>
             </div>
         </div>
     </nav>
