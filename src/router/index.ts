@@ -1,29 +1,77 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
+      path: '/:catchAll(.*)*',
+      component: () => import('../views/404View.vue')
+    },
+    {
       path: '/',
       name: 'Inicio',
-      component: HomeView
+      component: () => import('../views/HomeView.vue')
     },
     {
       path: '/about',
       name: 'Acerca de',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('../views/AboutView.vue')
     },
     {
       path: '/login',
-      name: 'Login',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
+      name: 'Inicio de sesión',
+      component: () => import('../views/LoginView.vue')
+    },
+    {
+      path: '/register',
+      name: 'Registro',
+      component: () => import('../views/LoginView.vue')
+    },
+    {
+      path: '/products',
+      name: 'Productos',
+      component: () => import('../views/ProductsView.vue'),
+      redirect: {name: 'Productos.list'},
+      children: [
+        {
+          path: 'list',
+          name: 'Productos.list',
+          component: () => import('../components/products/ProductList.vue'),
+        },
+        {
+          path: 'add',
+          name: 'Productos.add',
+          component: () => import('../components/products/ProductAdd.vue'),
+        },
+        {
+          path: 'edit',
+          name: 'Productos.edit',
+          component: () => import('../components/products/ProductEdit.vue'),
+        }
+      ],
+    },
+    {
+      path: '/clients',
+      name: 'Clientes',
+      component: () => import('../views/ClientsView.vue'),
+      redirect: {name: 'Clientes.list'},
+      children: [
+        {
+          path: 'list',
+          name: 'Clientes.list',
+          component: () => import('../components/clients/ClientList.vue'),
+        },
+        {
+          path: 'add',
+          name: 'Clientes.add',
+          component: () => import('../components/clients/ClientAdd.vue'),
+        },
+        {
+          path: 'edit',
+          name: 'Clientes.edit',
+          component: () => import('../components/clients/ClientEdit.vue'),
+        }
+      ],
     }
   ]
 })
