@@ -9,11 +9,6 @@
         <header class="masthead mb-auto">
           <div class="inner">
             <h3 class="masthead-brand">Página principal</h3>
-            <nav class="nav nav-masthead justify-content-center">
-              <a class="nav-link active" href="#">Home</a>
-              <a class="nav-link" href="#">Features</a>
-              <a class="nav-link" href="#">Contact</a>
-            </nav>
           </div>
         </header>
 
@@ -21,13 +16,13 @@
           <h1 class="cover-heading">CRUD.</h1>
           <p class="lead">Para proceder, intente iniciar sesión.</p>
           <p class="lead">
-            <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
+            <RouterLink :to="{ name: 'Inicio de sesión' }" class="btn btn-lg btn-secondary">Log In</RouterLink>
           </p>
         </main>
 
         <footer class="mastfoot mt-auto">
           <div class="inner">
-            <p> © {{ new Date().getFullYear() }}, Christian Alvarado. <a href="https://getbootstrap.com/">Facebook</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+            <p> © {{ new Date().getFullYear() }}, Christian Alvarado. </p>
           </div>
         </footer>
       </div>

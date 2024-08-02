@@ -18,7 +18,7 @@ const checkServerHealth = async () => {
 };
 
 onMounted(() => {
-  checkServerHealth();
+  //checkServerHealth();
   //checkInterval = setInterval(checkServerHealth, 5000);
 })
 

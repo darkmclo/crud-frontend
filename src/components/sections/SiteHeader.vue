@@ -12,45 +12,36 @@
             <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                <RouterLink class="nav-link" to="/">Inicio
-                    <span class="visually-hidden">(current)</span>
-                </RouterLink>
+                    <RouterLink class="nav-link" to="/">Inicio
+                        <span class="visually-hidden">(current)</span>
+                    </RouterLink>
                 </li>
                 <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Productos</a>
                 <div class="dropdown-menu">
-                    <RouterLink class="dropdown-item" to="/products">Listado</RouterLink>
-                    <a class="dropdown-item" href="#">Añadir</a>
+                    <RouterLink class="dropdown-item" :to="{ name: 'Productos' }">Listado</RouterLink>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Otros</a>
+                    <RouterLink class="dropdown-item" :to="{ name: 'Productos.add' }">Añadir</RouterLink>
                 </div>
                 </li>
                 <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Facturar</a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="#">Crear factura</a>
-                    <a class="dropdown-item" href="#">Listado</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Otros</a>
+                    <a class="dropdown-item" href="#">Listado</a>
                 </div>
                 </li>
                 <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Clientes</a>
                 <div class="dropdown-menu">
-                    <RouterLink class="dropdown-item" to="/clients">Listado</RouterLink>
-                    <a class="dropdown-item" href="#">Añadir</a>
+                    <RouterLink class="dropdown-item" :to="{ name: 'Clientes' }">Listado</RouterLink>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Otros</a>
+                    <RouterLink class="dropdown-item" :to="{ name: 'Clientes.add' }">Añadir</RouterLink>
                 </div>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">Cuentas x Cobrar</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Cuentas x Pagar</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Acerca de</a>
+                    <RouterLink class="nav-link" to="/pkmn">PKMN</RouterLink>
                 </li>
             </ul>
             <div class="d-flex">
