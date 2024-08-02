@@ -27,9 +27,9 @@
                 <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Facturar</a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Crear factura</a>
+                    <RouterLink class="dropdown-item" :to="{ name: 'Facturas.add' }">Crear factura</RouterLink>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Listado</a>
+                    <RouterLink class="dropdown-item" :to="{ name: 'Facturas' }">Listado</RouterLink>
                 </div>
                 </li>
                 <li class="nav-item dropdown">

@@ -74,7 +74,7 @@ const router = createRouter({
           props: true
         }
       ],
-    }
+    },
     {
       path: '/bills',
       name: 'Facturas',
