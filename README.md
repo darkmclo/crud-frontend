@@ -1,39 +1,35 @@
 # crud-frontend
 
-This template should help get you started developing with Vue 3 in Vite.
+Este es proyecto se encuentra desarrollado con Vue, Vite, y demás paquetes y herramientas.
+Para acceder al proyecto de **backend desarrollado con PHP y Laravel** [haz clic sobre este enlace](https://github.com/darkmclo/crud-backend).
 
-## Recommended IDE Setup
+## Software necesario
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Para ejecutar el proyecto, es necesario tener el siguiente software instalado:
 
-## Type Support for `.vue` Imports in TS
+1. **Node.js** (v20.15.1 o superior) [Canal LTS] - [Descargar](https://nodejs.org/en/download/prebuilt-installer)
+2. **yarn** (última versión estable)
+    - Al finalizar la instalación de Node.js, ejecutar el siguiente comando en la terminal (Shell, CMD, PowerShell, etc) de su sistema:
+    ```sh
+    npm install --global yarn
+    ```
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## Instalación del proyecto
 
-## Customize configuration
+Clone o descargue este repositorio en la ubicación de su preferencia. Seguido de esto entre a el directorio raíz (`crud-frontend`), y ejecute los siguientes comandos:
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
+#### 1. Configuración del proyecto e instalación de dependencias
 ```sh
 yarn
 ```
 
-### Compile and Hot-Reload for Development
-
+#### 2. Compile el proyecto para desarrollo
 ```sh
 yarn dev
 ```
+El proyecto se encontrará desplegado y ejecutando de manera local, por lo general mediante la dirección `http://localhost:5173/`.
 
-### Type-Check, Compile and Minify for Production
-
+##### (Opcional) Genere una build para producción si lo desea
 ```sh
 yarn build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-yarn lint
 ```
