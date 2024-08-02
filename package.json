@@ -14,11 +14,16 @@
   "dependencies": {
     "@vee-validate/zod": "^4.13.2",
     "axios": "^1.7.2",
+    "chart.js": "^4.4.3",
+    "maska": "^3.0.0",
     "pinia": "^2.1.7",
     "universal-cookie": "^7.2.0",
+    "v-mask": "^2.3.0",
     "vee-validate": "^4.13.2",
     "vue": "^3.4.29",
+    "vue-chartjs": "^5.3.1",
     "vue-router": "^4.3.3",
+    "yup": "^1.4.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
