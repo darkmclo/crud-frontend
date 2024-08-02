@@ -44,9 +44,10 @@ const router = createRouter({
           component: () => import('../components/products/ProductAdd.vue'),
         },
         {
-          path: 'edit',
+          path: 'edit/:id',
           name: 'Productos.edit',
           component: () => import('../components/products/ProductEdit.vue'),
+          props: true
         }
       ],
     },
@@ -67,9 +68,34 @@ const router = createRouter({
           component: () => import('../components/clients/ClientAdd.vue'),
         },
         {
-          path: 'edit',
+          path: 'edit/:id',
           name: 'Clientes.edit',
           component: () => import('../components/clients/ClientEdit.vue'),
+          props: true
+        }
+      ],
+    }
+    {
+      path: '/bills',
+      name: 'Facturas',
+      component: () => import('../views/BillsView.vue'),
+      redirect: {name: 'Facturas.list'},
+      children: [
+        {
+          path: 'list',
+          name: 'Facturas.list',
+          component: () => import('../components/bills/BillsList.vue'),
+        },
+        {
+          path: 'add',
+          name: 'Facturas.add',
+          component: () => import('../components/bills/BillsAdd.vue'),
+        },
+        {
+          path: 'edit/:id',
+          name: 'Facturas.edit',
+          component: () => import('../components/bills/BillsEdit.vue'),
+          props: true
         }
       ],
     }
