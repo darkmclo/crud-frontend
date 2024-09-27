@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+    const jwt_user = localStorage.getItem('jwt') ? localStorage.getItem('jwt') : null;
 </script>
 
 <template>
@@ -24,6 +24,7 @@
                     <RouterLink class="dropdown-item" :to="{ name: 'Productos.add' }">Añadir</RouterLink>
                 </div>
                 </li>
+                <!--
                 <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Facturar</a>
                 <div class="dropdown-menu">
@@ -32,6 +33,7 @@
                     <RouterLink class="dropdown-item" :to="{ name: 'Facturas' }">Listado</RouterLink>
                 </div>
                 </li>
+                -->
                 <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Clientes</a>
                 <div class="dropdown-menu">
@@ -40,11 +42,13 @@
                     <RouterLink class="dropdown-item" :to="{ name: 'Clientes.add' }">Añadir</RouterLink>
                 </div>
                 </li>
+                <!--
                 <li class="nav-item">
                     <RouterLink class="nav-link" to="/pkmn">PKMN</RouterLink>
                 </li>
+                -->
             </ul>
-            <div class="d-flex">
+            <div v-if="jwt_user" class="d-flex">
                 <RouterLink to="/login" class="btn btn-warning me-2" type="button">Iniciar sesión</RouterLink>
                 <RouterLink to="/register" class="btn btn-secondary me-2" type="button">Registrarse</RouterLink>
             </div>

@@ -45,7 +45,7 @@ console.log((productNameArray.value));
 const ProductData: any = ref([]);
 
 const ProductDataTop10Sort: any = computed(() => {
-    return (ProductData.value).slice(0,10).sort(function(a, b) {
+    return (ProductData.value).slice(0,10).sort(function(a: any, b: any) {
         return b.count - a.count;
     });
 });
@@ -60,17 +60,17 @@ console.log(JSON.parse(value));
 */
 
 const ProductDataQuantityTotal: any = computed(() => {
-    return (ProductData.value).reduce((acc, ite) => {
+    return (ProductData.value).reduce((acc: any, ite: any) => {
         return acc + parseInt(ite.quantity);
     }, 0);
 });
 const ProductDataPriceTotal: any = computed(() => {
-    return (ProductData.value).reduce((acc, ite) => {
+    return (ProductData.value).reduce((acc: any, ite: any) => {
         return acc + Number(ite.price);
     }, 0).toFixed(2);
 });
 const ProductDataGrandTotal: any = computed(() => {
-    return ( (ProductData.value).reduce((acc, ite) => {
+    return ( (ProductData.value).reduce((acc: any, ite: any) => {
         return acc + (parseInt(ite.quantity) * Number(ite.price));
     }, 0) ).toFixed(2);
 });

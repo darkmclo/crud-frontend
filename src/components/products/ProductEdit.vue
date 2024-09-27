@@ -175,13 +175,14 @@ const isRequiredPrice:any = (value: any) => {
 const getProductInfo = async (selected_id: number) => {
     try {
         const response = await productStore.getProductbyId( selected_id );
-        if (response.status === 200 || response.status === 201) {
-            editProductFormData.value.id = Number(response.data[0].id);
-            editProductFormData.value.productName = String(response.data[0].productName);
-            editProductFormData.value.quantity = parseInt(response.data[0].quantity);
-            editProductFormData.value.price = parseFloat(response.data[0].price);
-            showAlertsandResetafterTimeout("Se ha cargado la información del producto.", "success");
-        }
+        //if (response.status === 200 || response.status === 201) {}
+            //editProductFormData.value.id = Number(response.data[0].id);
+        editProductFormData.value.id = Number(response.data.id);
+        editProductFormData.value.productName = String(response.data.productName);
+        editProductFormData.value.quantity = parseInt(response.data.quantity);
+        editProductFormData.value.price = parseFloat(response.data.price);
+        showAlertsandResetafterTimeout("Se ha cargado la información del producto.", "success");
+        
         console.log("Se ha cargado la información del producto");
     } catch(exception: any){
         if (exception.error || exception.status || exception.name === "AxiosError") {
