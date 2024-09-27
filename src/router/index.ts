@@ -10,7 +10,10 @@ const router = createRouter({
     {
       path: '/',
       name: 'Inicio',
-      component: () => import('../views/HomeView.vue')
+      redirect: () => {
+        return { name: 'Productos.list' }
+      },
+      //component: () => import('../views/HomeView.vue')
     },
     {
       path: '/about',
@@ -22,16 +25,21 @@ const router = createRouter({
       name: 'Inicio de sesión',
       component: () => import('../views/LoginView.vue')
     },
+    /*
     {
       path: '/register',
       name: 'Registro',
       component: () => import('../views/LoginView.vue')
     },
+    */
     {
       path: '/products',
       name: 'Productos',
       component: () => import('../views/ProductsView.vue'),
-      redirect: {name: 'Productos.list'},
+      redirect: () => {
+        return { name: 'Productos.list' }
+      },
+      //redirect: {name: 'Productos.list'},
       children: [
         {
           path: 'list',
