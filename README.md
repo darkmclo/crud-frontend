@@ -42,5 +42,5 @@ El proyecto se encontrará desplegado y ejecutando de manera local, por lo gener
 
 ##### (Opcional) Genere una build para producción si lo desea
 ```sh
-yarn build
+pnpm build
 ```
